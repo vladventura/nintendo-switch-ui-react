@@ -13,4 +13,9 @@ html {
 body {
   background-color: rgb(66, 66, 66);
   font-family: "NSW";
+  margin: 0;
+}
+
+p {
+  color: white;
 }

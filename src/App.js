@@ -14,6 +14,12 @@ function App() {
             />
           </div>
         </div>
+        <div className="status-info">
+          <p>7:32pm</p>
+          <i class="fas fa-wifi wifi-icon icon"></i>
+          <p>86%</p>
+          <i class="fas fa-battery-half battery-icon icon"></i>
+        </div>
       </div>
       <div className="main-container">
         <div className="content"></div>
