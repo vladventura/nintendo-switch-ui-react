@@ -1,38 +1,42 @@
-.App {
+.main-screen {
+  display: flex;
+}
+
+.friends-count {
+    color: rgb(166, 255, 0);
+    margin: 0;
+}
+
+.player-icon {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  height: 174.5px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.player-icon-img {
+  width: 130px;
+  height: 130px;
+  padding: 10px;
+  border-radius: 50%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.player-icon-img-container {
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  position: relative;
+  border-radius: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.player-icon-img-container::before {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 150px;
+  background-color: rgb(107, 103, 103);
+  z-index: -1;
+  position: absolute;
+  border-radius: 50%;
 }
