@@ -1,4 +1,5 @@
 import "./App.css";
+import { GameCarousel } from "./components/GameCarousel";
 
 function App() {
   return (
@@ -16,13 +17,13 @@ function App() {
         </div>
         <div className="status-info">
           <p>7:32pm</p>
-          <i class="fas fa-wifi wifi-icon icon"></i>
+          <i className="fas fa-wifi wifi-icon icon"></i>
           <p>86%</p>
-          <i class="fas fa-battery-half battery-icon icon"></i>
+          <i className="fas fa-battery-half battery-icon icon"></i>
         </div>
       </div>
       <div className="main-container">
-        <div className="content"></div>
+        <GameCarousel />
         <div className="utils-column"></div>
       </div>
       <div className="bottom-bar"></div>

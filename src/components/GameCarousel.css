@@ -1,0 +1,27 @@
+.carousel {
+  display: flex;
+  overflow: hidden;
+  scroll-padding: 0 50%;
+  scroll-snap-type: x mandatory;
+  height: auto;
+  margin: 0;
+  padding: 0 3rem;
+}
+
+.carousel-item {
+  scroll-snap-align: center;
+  display: inline-block;
+  border-radius: 3px;
+  font-size: 0;
+  margin: 1rem 3rem;
+  height: max-content;
+}
+
+.carousel-item > img {
+  height: 15rem;
+  width: 15rem;
+}
+
+.content {
+  margin: 2rem 0;
+}

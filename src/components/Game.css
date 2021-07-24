@@ -1,0 +1,14 @@
+.game {
+  width: max-content;
+  height: max-content;
+  text-align: center;
+  list-style-type: none;
+  margin: 0 2rem;
+  scroll-snap-align: center;
+  display: inline-block;
+}
+
+.game > img {
+  width: 15rem;
+  height: 15rem;
+}
