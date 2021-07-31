@@ -1,8 +1,13 @@
 import "./ScrollText.css";
+import Ticker from "react-ticker";
 
-const ScrollText = ({ text }) => (
+const ScrollText = ({ text, showText }) => (
   <div className="scroll-container">
-    <p className="scrollable-name">{text}</p>
+    {
+      <Ticker direction="toLeft" mode="smooth">
+        {() => <p className="">{text}</p>}
+      </Ticker>
+    }
   </div>
 );
 

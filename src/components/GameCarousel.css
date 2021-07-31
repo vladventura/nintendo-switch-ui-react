@@ -2,14 +2,13 @@
   display: flex;
   overflow: hidden;
   scroll-padding: 0 50%;
-  scroll-snap-type: x mandatory;
   height: auto;
   margin: 0;
-  padding: 0 3rem;
+  padding: 1rem 3rem;
+  scroll-behavior: smooth;
 }
 
 .carousel-item {
-  scroll-snap-align: center;
   display: inline-block;
   border-radius: 3px;
   font-size: 0;
@@ -23,5 +22,5 @@
 }
 
 .content {
-  margin: 2rem 0;
+  margin: 2rem 5rem;
 }

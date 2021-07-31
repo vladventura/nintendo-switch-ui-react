@@ -6,9 +6,26 @@
   margin: 0 2rem;
   scroll-snap-align: center;
   display: inline-block;
+  padding: 0.25rem 0.25rem;
 }
 
-.game > img {
-  width: 15rem;
-  height: 15rem;
+.game > .game-content > img {
+  width: 25rem;
+  height: 25rem;
+}
+
+.game-content {
+  padding: 1rem;
+}
+
+.game:focus,
+.game:focus-visible {
+  border: none;
+  outline: none;
+}
+
+.game.active:focus-visible > .game-content,
+.game.active:focus > .game-content {
+  box-shadow: 0 0 0 0.25rem gold;
+  border-radius: 1%;
 }
