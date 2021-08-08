@@ -1,6 +1,6 @@
 export const games = [
   {
-    name: "MHST2",
+    name: "Monster Hunter Stories 2: The Wings of Ruin",
     image: "https://www.switchiconshowdown.com/images/5664.png",
   },
   {
