@@ -8,16 +8,23 @@
   flex-direction: row;
   justify-content: center;
 }
+
+.animated-child {
+  justify-content: normal;
+}
+
 .scrollable-name {
   position: absolute;
-  width: 30rem;
+  width: max-content;
   height: 100%;
   margin: 0;
   line-height: 50px;
-  text-align: center;
-  font-size: 2rem;
-  animation: scroll-left 15s linear infinite;
+  font-size: 1.5rem;
   color: var(--nsw-blue);
+}
+
+.animated-name {
+  animation: scroll-left 15s linear infinite;
 }
 
 @keyframes scroll-left {
@@ -26,14 +33,14 @@
   }
 
   55% {
-    transform: translateX(-100%);
+    transform: translateX(-125%);
   }
 
   56%, 57% {
     transform: translateY(300%);
   }
   58%, 59% {
-    transform: translateX(100%);
+    transform: translateX(125%);
   }
 
   100% {
