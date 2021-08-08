@@ -34,8 +34,10 @@ const Game = ({ name, className, image, tabIndex, active, onClick }) => {
       }`}
     >
       <div className="game-content">
-        <ScrollText text={name} showText={showName} />
-        <img alt={name} src={image} />
+        <ScrollText text={name} showText={active} />
+        <div className="game-image-container">
+          <img alt={name} src={image} />
+        </div>
       </div>
     </li>
   );
