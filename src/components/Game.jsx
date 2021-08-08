@@ -1,10 +1,9 @@
-import { useState, useRef, useEffect } from "react";
 import "./Game.css";
+import { useRef, useEffect } from "react";
 import { ScrollText } from "./ScrollText";
 
 const Game = ({ name, className, image, tabIndex, active, onClick }) => {
   let gameRef = useRef(null);
-  const [showName, setShowName] = useState(false);
 
   useEffect(() => {
     if (gameRef.current && active) {
@@ -17,17 +16,14 @@ const Game = ({ name, className, image, tabIndex, active, onClick }) => {
     onClick?.();
     console.log("Scrolled");
     gameRef.current.scrollIntoView({ block: "end", behavior: "smooth" });
-    setShowName(true);
   };
 
-  const onBlur = () => setShowName(false);
 
   return (
     <li
       ref={gameRef}
       tabIndex={tabIndex}
       onFocus={onFocus}
-      onBlur={onBlur}
       onClick={(e) => e.preventDefault()}
       className={`game${className ? " " + className : ""}${
         active ? " active" : ""
