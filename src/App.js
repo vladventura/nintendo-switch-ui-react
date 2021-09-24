@@ -1,22 +1,34 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import { GameCarousel } from "./components/GameCarousel";
-import { BatteryEmpty, BatteryQuarter, BatteryHalf, BatteryThreeQuarters, BatteryFull } from "./icons";
+import {
+  BatteryEmpty,
+  BatteryQuarter,
+  BatteryHalf,
+  BatteryThreeQuarters,
+  BatteryFull,
+} from "./icons";
 import profilePic from "./assets/karin.jpg";
+import { useDate } from "./hooks/useDate";
 
 function App() {
   const [batteryPercentage, setBatteryPercentage] = useState("");
   const [batteryIcon, setBatteryIcon] = useState("");
+  const { timeString } = useDate();
 
   const getBatteryIcon = () => {
     switch (batteryIcon) {
-      case "battery-empty": return <BatteryEmpty className="battery-icon" />
-      case "battery-quarter": return <BatteryQuarter className="battery-icon" />
-      case "battery-half": return <BatteryHalf className="battery-icon" />;
-      case "battery-three-quarters": return <BatteryThreeQuarters className="battery-icon" />
+      case "battery-empty":
+        return <BatteryEmpty className="battery-icon" />;
+      case "battery-quarter":
+        return <BatteryQuarter className="battery-icon" />;
+      case "battery-half":
+        return <BatteryHalf className="battery-icon" />;
+      case "battery-three-quarters":
+        return <BatteryThreeQuarters className="battery-icon" />;
       case "battery-full":
       default:
-        return <BatteryFull className="battery-icon" />
+        return <BatteryFull className="battery-icon" />;
     }
   };
 
@@ -35,23 +47,23 @@ function App() {
       setBatteryIcon("battery-empty");
     }
     setBatteryPercentage(percentage);
-  }
+  };
 
   useEffect(() => {
-    let hasBatteryInNavigator = 'getBattery' in navigator;
+    let hasBatteryInNavigator = "getBattery" in navigator;
     if (hasBatteryInNavigator) {
       let bmPromise = navigator.getBattery();
-      bmPromise.then(BatteryManager => {
+      bmPromise.then((BatteryManager) => {
         handleBattery(BatteryManager);
-        BatteryManager.addEventListener('levelchange', (ev) => {
+        BatteryManager.addEventListener("levelchange", (ev) => {
           handleBattery(BatteryManager);
         });
-      }
-      );
+      });
     } else {
       handleBattery(100);
     }
-  }, [])
+  }, []);
+
   return (
     <div className="screen">
       <div className="status-bar">
@@ -66,7 +78,7 @@ function App() {
           </div>
         </div>
         <div className="status-info">
-          <p>7:32pm</p>
+          <p>{timeString}</p>
           <i className="fas fa-wifi wifi-icon icon"></i>
           <p>{batteryPercentage}%</p>
           {getBatteryIcon()}
