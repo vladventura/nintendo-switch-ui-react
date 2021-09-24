@@ -1,6 +1,11 @@
 .battery-icon {
-  width: 2rem!important;
-  height: 1.75rem!important;
+  width: 2rem;
+  height: 1.75rem;
+  margin-left: 0.5rem;
+}
+
+.battery-icon > path {
+  fill: white;
 }
 
 .friends-count {

@@ -39,6 +39,7 @@
     ]
   },
   "devDependencies": {
+    "@svgr/webpack": "^5.5.0",
     "gh-pages": "^3.2.3"
   }
 }
