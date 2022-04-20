@@ -14,7 +14,6 @@ const Game = ({ name, className, image, tabIndex, active, onClick }) => {
   const onFocus = (e) => {
     e?.preventDefault();
     onClick?.();
-    console.log("Scrolled");
     gameRef.current.scrollIntoView({ block: "end", behavior: "smooth" });
   };
 

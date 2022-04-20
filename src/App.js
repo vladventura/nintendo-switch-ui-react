@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { GameCarousel } from "./components/GameCarousel";
 import { BatteryEmpty, BatteryQuarter, BatteryHalf, BatteryThreeQuarters, BatteryFull } from "./icons";
 import profilePic from "./assets/karin.jpg";
+import { Clock } from "./components/Clock";
 
 function App() {
   const [batteryPercentage, setBatteryPercentage] = useState("");
@@ -66,7 +67,7 @@ function App() {
           </div>
         </div>
         <div className="status-info">
-          <p>7:32pm</p>
+          <Clock />
           <i className="fas fa-wifi wifi-icon icon"></i>
           <p>{batteryPercentage}%</p>
           {getBatteryIcon()}
