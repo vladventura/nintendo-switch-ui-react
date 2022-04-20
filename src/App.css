@@ -1,54 +1,5 @@
-.battery-icon {
-  width: 2rem;
-  height: 1.75rem;
-  margin-left: 0.5rem;
-}
-
-.battery-icon > path {
-  fill: white;
-}
-
-.friends-count {
-  color: rgb(166, 255, 0);
-  margin: 0;
-}
-
 .main-screen {
   display: flex;
-}
-
-.player-icon {
-  display: flex;
-  flex-direction: column;
-  width: 3.5rem;
-  height: 3.5rem;
-  text-align: center;
-}
-
-.player-icon-img {
-  width: 3rem;
-  height: 3rem;
-  padding: 0.25rem;
-  border-radius: 50%;
-}
-
-.player-icon-img-container {
-  width: 3rem;
-  height: 5rem;
-  text-align: center;
-  position: relative;
-  border-radius: 10px;
-}
-
-.player-icon-img-container::before {
-  content: "";
-  display: block;
-  width: 3.5rem;
-  height: 3.5rem;
-  background-color: rgb(107, 103, 103);
-  z-index: -1;
-  position: absolute;
-  border-radius: 50%;
 }
 
 .status-bar {
@@ -74,6 +25,6 @@
 
 .icon {
   /* Counters the incoming width from fontawesome */
-  width: 3rem!important;
+  width: 3rem !important;
   color: white;
 }

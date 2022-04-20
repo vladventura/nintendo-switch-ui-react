@@ -1,0 +1,13 @@
+.battery-icon>path {
+    fill: white;
+}
+
+.battery-percentage {
+    color: white;
+}
+
+.battery-icon {
+    width: 2rem;
+    height: 1.75rem;
+    margin-left: 0.5rem;
+}
