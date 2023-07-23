@@ -1,14 +1,15 @@
 import { useState } from "react";
 
-export const useControls = (items = []) => {
-    const [itemCount, setItemCount] = useState(items);
+export const useControls = (itemCount = 0) => {
+    const [memoryIndex, setMemoryIndex] = useState(0);
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [controlActive, setControlActive] = useState(true);
     const toggleControls = () => {
         if (controlActive) {
+            setMemoryIndex(selectedIndex);
             setSelectedIndex(-1);
         } else {
-            setSelectedIndex(0);
+            setSelectedIndex(memoryIndex);
         }
         setControlActive(!controlActive);
     }
@@ -16,7 +17,7 @@ export const useControls = (items = []) => {
         if (controlActive) {
             e.preventDefault();
             if (e.keyCode === 65 && selectedIndex > 0) setSelectedIndex(selectedIndex - 1);
-            if (e.keyCode === 68 && selectedIndex < itemCount.length - 1) setSelectedIndex(selectedIndex + 1);
+            if (e.keyCode === 68 && selectedIndex < itemCount - 1) setSelectedIndex(selectedIndex + 1);
         }
         if (e.keyCode === 67) {
             toggleControls();
@@ -24,5 +25,5 @@ export const useControls = (items = []) => {
         }
     };
 
-    return [onKeyDown, selectedIndex, setSelectedIndex];
+    return [onKeyDown, selectedIndex, setSelectedIndex, toggleControls, controlActive];
 }
