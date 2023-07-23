@@ -4,26 +4,22 @@ import { faBagShopping, faImage, faGamepad, faGear, faPowerOff } from '@fortawes
 import { faMessage } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+const icons = [
+    ["messages", faMessage],
+    ["shop", faBagShopping],
+    ["gallery", faImage],
+    ["", faGamepad],
+    ["", faGear],
+    ["", faPowerOff],
+];
+
 
 export const UtilsRow = () => {
     return <div className='rosso'>
+        {icons.map((i, n) => 
         <div className="util-icon">
-            <FontAwesomeIcon className='icon messages' icon={faMessage} />
+            <FontAwesomeIcon key={"icon"+n} className={`icon ${i[0]}`} icon={i[1]} />
         </div>
-        <div className="util-icon">
-            <FontAwesomeIcon className='icon shop' icon={faBagShopping} />
-        </div>
-        <div className="util-icon">
-            <FontAwesomeIcon className='icon gallery' icon={faImage} />
-        </div>
-        <div className="util-icon">
-            <FontAwesomeIcon className='icon' icon={faGamepad} />
-        </div>
-        <div className="util-icon">
-            <FontAwesomeIcon className='icon' icon={faGear} />
-        </div>
-        <div className="util-icon">
-            <FontAwesomeIcon className='icon' icon={faPowerOff} />
-        </div>
+        )}
     </div>
 }
