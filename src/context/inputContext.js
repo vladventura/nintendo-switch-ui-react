@@ -4,40 +4,59 @@ import { createContext, useReducer } from "react";
 const InputContext = createContext();
 
 const initState = {
-    items: [{
-        currentIndex: 0,
-        set: [],
-    },],
     activeSet: 0,
-    setActiveSet: (index) => { },
-    setCurrentIndex: (index) => { },
-    addActiveSet: (activeSet) => { },
+    setNumber: 0,
+    onKeyDown: (e) => { },
+    setTotalSets: (n) => {},
 };
 
 const inputContextReducer = (state = initState, action) => {
     switch (action.type) {
-        case "ADD_ACTIVE_SET":
+        case "ON_KEY_DOWN":
             return {
                 ...state,
-                items: [...items, action.payload]
+                activeSet: action.payload,
             };
-        case "SET_CURRENT_INDEX":
-            const spy = state.items;
-            spy[state.activeSet].currentIndex = action.payload;
+        case "SET_TOTAL_SETS":
             return {
                 ...state,
-                items: [...spy]
-            };
-        case "SET_ACTIVE_SET":
-            return {
-                ...state,
-                activeSet: action.payload
-            };
+                setNumber: action.payload
+            }
         default:
             return state;
     }
 };
 
-const SocketProvider = (props) => {
+const InputProvider = (props) => {
     const [state, dispatch] = useReducer(inputContextReducer, initState);
+
+    const onKeyDown = (e) => {
+        e.preventDefault();
+        if (e.keyCode === 87) {
+            alert("W press");
+        }
+        if (e.keyCode === 83) {
+            alert("S press");
+        }
+    };
+
+    const setTotalSets = (n) => {
+        dispatch({
+            type: "ADD_SET",
+            payload: n,
+        });
+        
+    };
+
+
+    return <InputContext.Provider
+        value={{
+            onKeyDown,
+            setTotalSets,
+        }}
+        {...props}
+    />
+
 };
+
+export { InputContext, InputProvider };
