@@ -6,11 +6,17 @@ import { PlayerIcon } from "./components/PlayerIcon";
 import { UtilsRow } from "./components/UtilsRow";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWifi } from "@fortawesome/free-solid-svg-icons";
+import { useContext } from "react";
+import { InputContext } from "./context/inputContext";
 
 function App() {
 
+  const { onKeyDown, setTotalSets } = useContext(InputContext);
+
+  setTotalSets(2);
+
   return (
-    <div className="screen">
+    <div className="screen" onKeyDown={onKeyDown}>
       <div className="status-bar">
         <PlayerIcon />
         <div className="status-info">
