@@ -8,18 +8,20 @@ import { InputContext } from "../context/inputContext";
 const activeSetIndex = 0;
 
 const GameCarousel = () => {
-  // const [selectedIndex, setSelectedIndex] = useState(0);
-  const { activeSet } = useContext(InputContext);
-  const [onKeyDown, selectedIndex, setSelectedIndex, toggleControls, controlActive] = useControls(games.length);
+  const context = useContext(InputContext);
+  const activeSet = context.state.activeSet;
+  const [onKeyDown, selectedIndex, setSelectedIndex, activate, deactivate, controlActive] = useControls(games.length);
 
   useEffect(() => {
-    if (activeSet === activeSetIndex && !controlActive) {
-      toggleControls();
+    if (activeSet === activeSetIndex) {
+      activate();
+    } else {
+      deactivate();
     }
   }, [activeSet]);
 
   return (
-    <div className="content" onKeyDown={onKeyDown} onClick={onKeyDown}>
+    <div className="content" onKeyDown={onKeyDown}>
       <ul
         className="carousel"
         onScroll={(e) => e.preventDefault()}
