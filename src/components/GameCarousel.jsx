@@ -37,7 +37,7 @@ const GameCarousel = () => {
               image={game.image}
               key={game.name}
               tabIndex={index}
-              active={selectedIndex === index}
+              active={selectedIndex === index && controlActive}
             />
           );
         })}
