@@ -1,23 +1,22 @@
 import "./GameCarousel.css";
 import { Game } from "./Game";
 import { games } from "../mock/";
-import { useState } from "react";
+import { useControls } from "../hooks/controls";
+import { useContext, useEffect } from "react";
+import { InputContext } from "../context/inputContext";
+
+const activeSetIndex = 0;
 
 const GameCarousel = () => {
-  const [selectedIndex, setSelectedIndex] = useState(0);
+  // const [selectedIndex, setSelectedIndex] = useState(0);
+  const { activeSet } = useContext(InputContext);
+  const [onKeyDown, selectedIndex, setSelectedIndex, toggleControls, controlActive] = useControls(games.length);
 
-  const onKeyDown = (e) => {
-    e.preventDefault();
-    if (e.type === "keydown") {
-      if (e.keyCode === 65) {
-        if (selectedIndex > 0) setSelectedIndex(selectedIndex - 1);
-      }
-      if (e.keyCode === 68) {
-        if (selectedIndex < games.length - 1)
-          setSelectedIndex(selectedIndex + 1);
-      }
+  useEffect(() => {
+    if (activeSet === activeSetIndex && !controlActive) {
+      toggleControls();
     }
-  };
+  }, [activeSet]);
 
   return (
     <div className="content" onKeyDown={onKeyDown} onClick={onKeyDown}>
