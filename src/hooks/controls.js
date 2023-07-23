@@ -4,15 +4,18 @@ export const useControls = (itemCount = 0) => {
     const [memoryIndex, setMemoryIndex] = useState(0);
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [controlActive, setControlActive] = useState(true);
-    const toggleControls = () => {
-        if (controlActive) {
-            setMemoryIndex(selectedIndex);
-            setSelectedIndex(-1);
-        } else {
-            setSelectedIndex(memoryIndex);
-        }
-        setControlActive(!controlActive);
+
+    const activate = () => {
+        setSelectedIndex(memoryIndex);
+        console.log("Called");
     }
+
+    const deactivate = () => {
+        setMemoryIndex(selectedIndex);
+        setSelectedIndex(-1);
+        console.log("Called");
+    }
+
     const onKeyDown = (e) => {
         if (controlActive) {
             e.preventDefault();
@@ -20,10 +23,9 @@ export const useControls = (itemCount = 0) => {
             if (e.keyCode === 68 && selectedIndex < itemCount - 1) setSelectedIndex(selectedIndex + 1);
         }
         if (e.keyCode === 67) {
-            toggleControls();
             console.log("Pressed the c");
         }
     };
 
-    return [onKeyDown, selectedIndex, setSelectedIndex, toggleControls, controlActive];
+    return [onKeyDown, selectedIndex, setSelectedIndex, activate, deactivate, controlActive];
 }
