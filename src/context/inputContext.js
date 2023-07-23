@@ -53,6 +53,7 @@ const InputProvider = (props) => {
         value={{
             onKeyDown,
             setTotalSets,
+            state,
         }}
         {...props}
     />
