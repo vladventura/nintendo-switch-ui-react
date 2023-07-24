@@ -5,3 +5,14 @@
     align-items: center;
 }
   
+.utils-row-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.utils-text {
+    width: 100%;
+}
+

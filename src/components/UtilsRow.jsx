@@ -5,6 +5,7 @@ import { Util } from './Util';
 import { useControls } from '../hooks/controls';
 import { useContext } from 'react';
 import { InputContext } from '../context/inputContext';
+import { ScrollText } from './ScrollText';
 
 const activeSetIndex = 1;
 
@@ -22,7 +23,9 @@ export const UtilsRow = () => {
     const {activeSet} = useContext(InputContext);
     const [onKeyDown, selectedIndex, setSelectedIndex] = useControls(icons.length);
 
-    return <div
+    return <div className='utils-row-container'>
+        <ScrollText className="utils-text" text={icons[selectedIndex][2]} showText={activeSet === activeSetIndex} />
+        <div
         onKeyDown={onKeyDown}
         onScroll={(e) => e.preventDefault()}
         onScrollCapture={(e) => e.preventDefault()}
@@ -39,5 +42,6 @@ export const UtilsRow = () => {
                 utilName={i[2]}
             />
         )}
+    </div>
     </div>
 }
