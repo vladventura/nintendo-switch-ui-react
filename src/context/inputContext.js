@@ -23,7 +23,7 @@ const inputContextReducer = (state = initState, action) => {
                 setNumber: action.payload
             }
         default:
-            return state;
+            return {...state};
     }
 };
 
@@ -32,17 +32,28 @@ const InputProvider = (props) => {
 
     const onKeyDown = (e) => {
         e.preventDefault();
+        const currentActiveSet = state.activeSet;
+        let result = 0;
         if (e.keyCode === 87) {
-            alert("W press");
+            result = (currentActiveSet - 1 < 0) ? 0 : currentActiveSet - 1; 
+            dispatch({
+                type: "ON_KEY_DOWN",
+                payload: result
+            });
+
         }
         if (e.keyCode === 83) {
-            alert("S press");
+            result = (currentActiveSet + 1) > state.setNumber ? currentActiveSet : currentActiveSet + 1;
+            dispatch({
+                type: "ON_KEY_DOWN",
+                payload: result
+            });
         }
     };
 
     const setTotalSets = (n) => {
         dispatch({
-            type: "ADD_SET",
+            type: "SET_TOTAL_SETS",
             payload: n,
         });
         
@@ -53,7 +64,8 @@ const InputProvider = (props) => {
         value={{
             onKeyDown,
             setTotalSets,
-            state,
+            activeSet: state.activeSet,
+            setNumber: state.setNumber,
         }}
         {...props}
     />
