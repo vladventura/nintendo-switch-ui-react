@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./ScrollText.css";
 
-const ScrollText = ({ text, showText }) => {
+const ScrollText = ({ text, showText, className }) => {
   const [longString, setLongString] = useState(false);
 
   useEffect(() => {
@@ -9,7 +9,7 @@ const ScrollText = ({ text, showText }) => {
   }, [text]);
 
   return (
-    <div className={`scroll-container${longString ? " animated-child" : ""}`}>
+    <div className={`scroll-container${longString ? " animated-child" : ""} ${className}`}>
       {showText && (
         <p className={`scrollable-name${longString ? " animated-name" : ""}`}>
           {text}

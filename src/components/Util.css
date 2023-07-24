@@ -1,0 +1,56 @@
+.util-icon {
+    background-color: #524f4f;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    position: relative;
+}
+
+.util-icon::after {
+    box-shadow: 0 0 0 0.25rem var(--nsw-blue);
+    content: "";
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    padding: 0;
+    opacity: 0;
+    animation: lightup ease-in-out 1s infinite;
+}
+
+.util-icon.active::after {
+    opacity: 1;
+    box-shadow: 0 0 0 0.25rem var(--nsw-blue-bright);
+}
+
+.icon.messages {
+    color: #fa5d3c;
+}
+
+.icon.shop {
+    color: #fcad1a;
+}
+
+.icon.gallery {
+    color: #2d9be5;
+}
+
+@keyframes lightup {
+    0% {
+        box-shadow: 0 0 0 0.25rem var(--nsw-blue-bright);
+    }
+
+    50%,
+    70% {
+        box-shadow: 0 0 0 0.25rem var(--nsw-blue);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0.25rem var(--nsw-blue-bright);
+    }
+}
