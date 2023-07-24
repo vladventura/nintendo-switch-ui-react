@@ -1,27 +1,28 @@
 {
   "files": {
-    "main.css": "/nintendo-switch-ui-react/static/css/main.7a0932cf.chunk.css",
-    "main.js": "/nintendo-switch-ui-react/static/js/main.6519b335.chunk.js",
-    "main.js.map": "/nintendo-switch-ui-react/static/js/main.6519b335.chunk.js.map",
+    "main.css": "/nintendo-switch-ui-react/static/css/main.624bf51d.chunk.css",
+    "main.js": "/nintendo-switch-ui-react/static/js/main.eb82ce47.chunk.js",
+    "main.js.map": "/nintendo-switch-ui-react/static/js/main.eb82ce47.chunk.js.map",
     "runtime-main.js": "/nintendo-switch-ui-react/static/js/runtime-main.80928b0e.js",
     "runtime-main.js.map": "/nintendo-switch-ui-react/static/js/runtime-main.80928b0e.js.map",
-    "static/js/2.8dac016f.chunk.js": "/nintendo-switch-ui-react/static/js/2.8dac016f.chunk.js",
-    "static/js/2.8dac016f.chunk.js.map": "/nintendo-switch-ui-react/static/js/2.8dac016f.chunk.js.map",
+    "static/js/2.90c8182c.chunk.js": "/nintendo-switch-ui-react/static/js/2.90c8182c.chunk.js",
+    "static/js/2.90c8182c.chunk.js.map": "/nintendo-switch-ui-react/static/js/2.90c8182c.chunk.js.map",
     "index.html": "/nintendo-switch-ui-react/index.html",
-    "static/css/main.7a0932cf.chunk.css.map": "/nintendo-switch-ui-react/static/css/main.7a0932cf.chunk.css.map",
-    "static/js/2.8dac016f.chunk.js.LICENSE.txt": "/nintendo-switch-ui-react/static/js/2.8dac016f.chunk.js.LICENSE.txt",
+    "static/css/main.624bf51d.chunk.css.map": "/nintendo-switch-ui-react/static/css/main.624bf51d.chunk.css.map",
+    "static/js/2.90c8182c.chunk.js.LICENSE.txt": "/nintendo-switch-ui-react/static/js/2.90c8182c.chunk.js.LICENSE.txt",
     "static/media/battery-empty-solid.a8a08663.svg": "/nintendo-switch-ui-react/static/media/battery-empty-solid.a8a08663.svg",
     "static/media/battery-full-solid.403aa982.svg": "/nintendo-switch-ui-react/static/media/battery-full-solid.403aa982.svg",
     "static/media/battery-half-solid.cfc95e66.svg": "/nintendo-switch-ui-react/static/media/battery-half-solid.cfc95e66.svg",
     "static/media/battery-quarter-solid.a8d5da71.svg": "/nintendo-switch-ui-react/static/media/battery-quarter-solid.a8d5da71.svg",
     "static/media/battery-three-quarters-solid.6a2f3536.svg": "/nintendo-switch-ui-react/static/media/battery-three-quarters-solid.6a2f3536.svg",
     "static/media/karin.c4bda6f5.jpg": "/nintendo-switch-ui-react/static/media/karin.c4bda6f5.jpg",
+    "static/media/message-regular.91f9e61e.svg": "/nintendo-switch-ui-react/static/media/message-regular.91f9e61e.svg",
     "static/media/index.css": "/nintendo-switch-ui-react/static/media/nsw.89b8e3ce.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.80928b0e.js",
-    "static/js/2.8dac016f.chunk.js",
-    "static/css/main.7a0932cf.chunk.css",
-    "static/js/main.6519b335.chunk.js"
+    "static/js/2.90c8182c.chunk.js",
+    "static/css/main.624bf51d.chunk.css",
+    "static/js/main.eb82ce47.chunk.js"
   ]
 }
