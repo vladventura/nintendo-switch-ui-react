@@ -43,7 +43,7 @@ const InputProvider = (props) => {
 
         }
         if (e.keyCode === 83) {
-            result = (currentActiveSet + 1) > state.setNumber ? currentActiveSet : currentActiveSet + 1;
+            result = (currentActiveSet + 1) >= state.setNumber ? currentActiveSet : currentActiveSet + 1;
             dispatch({
                 type: "ON_KEY_DOWN",
                 payload: result
