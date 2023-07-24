@@ -14,7 +14,6 @@ export const Util = ({ iconClass, faIcon, active, tabIndex, onClick }) => {
     const onFocus = (e) => {
         e?.preventDefault();
         onClick?.();
-        utilRef.current.scrollIntoView({ block: "end", behavior: "smooth" });
     }
 
     return <div 
