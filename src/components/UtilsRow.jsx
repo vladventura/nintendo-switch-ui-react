@@ -3,33 +3,24 @@ import { faBagShopping, faImage, faGamepad, faGear, faPowerOff } from '@fortawes
 import { faMessage } from '@fortawesome/free-regular-svg-icons';
 import { Util } from './Util';
 import { useControls } from '../hooks/controls';
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { InputContext } from '../context/inputContext';
 
 const activeSetIndex = 1;
 
 const icons = [
-    ["messages", faMessage],
-    ["shop", faBagShopping],
-    ["gallery", faImage],
-    ["", faGamepad],
-    ["", faGear],
-    ["", faPowerOff],
+    ["messages", faMessage, "News"],
+    ["shop", faBagShopping, "Nintendo Shop"],
+    ["gallery", faImage, "Gallery"],
+    ["", faGamepad, "Controllers"],
+    ["", faGear, "Settings"],
+    ["", faPowerOff, "Power"],
 ];
 
 
 export const UtilsRow = () => {
-    const context = useContext(InputContext);
-    const activeSet = context.state.activeSet;
-    const [onKeyDown, selectedIndex, setSelectedIndex, activate, deactivate] = useControls(icons.length);
-
-    useEffect(() => {
-        if (activeSet === activeSetIndex) {
-            activate();
-        } else {
-            deactivate();
-        }
-    }, [activeSet]);
+    const {activeSet} = useContext(InputContext);
+    const [onKeyDown, selectedIndex, setSelectedIndex] = useControls(icons.length);
 
     return <div
         onKeyDown={onKeyDown}
@@ -44,7 +35,8 @@ export const UtilsRow = () => {
                 faIcon={i[1]}
                 onClick={() => setSelectedIndex(index)}
                 tabIndex={index}
-                active={selectedIndex === index}
+                active={selectedIndex === index && activeSet === activeSetIndex}
+                utilName={i[2]}
             />
         )}
     </div>
