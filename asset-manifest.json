@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/nintendo-switch-ui-react/static/css/main.624bf51d.chunk.css",
-    "main.js": "/nintendo-switch-ui-react/static/js/main.eb82ce47.chunk.js",
-    "main.js.map": "/nintendo-switch-ui-react/static/js/main.eb82ce47.chunk.js.map",
+    "main.js": "/nintendo-switch-ui-react/static/js/main.71fa7e79.chunk.js",
+    "main.js.map": "/nintendo-switch-ui-react/static/js/main.71fa7e79.chunk.js.map",
     "runtime-main.js": "/nintendo-switch-ui-react/static/js/runtime-main.80928b0e.js",
     "runtime-main.js.map": "/nintendo-switch-ui-react/static/js/runtime-main.80928b0e.js.map",
     "static/js/2.90c8182c.chunk.js": "/nintendo-switch-ui-react/static/js/2.90c8182c.chunk.js",
@@ -23,6 +23,6 @@
     "static/js/runtime-main.80928b0e.js",
     "static/js/2.90c8182c.chunk.js",
     "static/css/main.624bf51d.chunk.css",
-    "static/js/main.eb82ce47.chunk.js"
+    "static/js/main.71fa7e79.chunk.js"
   ]
 }
