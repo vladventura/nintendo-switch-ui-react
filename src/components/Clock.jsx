@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {DateTime} from 'luxon';
+import { DateTime } from 'luxon';
 
 export const Clock = () => {
     const [timeString, setTimeString] = useState(DateTime.local().toFormat("hh:mma").toLowerCase());
