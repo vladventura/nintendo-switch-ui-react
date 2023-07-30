@@ -1,3 +1,23 @@
+.util-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 80% 20%;
+}
+
+.util-name-container {
+    height: 1rem;
+    width: 5rem;
+    text-align: center;
+}
+
+.util-name {
+    margin-left: -100%;
+    margin-right: -100%;
+    text-align: center;
+    color: var(--nsw-blue);
+}
+
+
 .util-icon {
     background-color: #524f4f;
     border-radius: 50%;
