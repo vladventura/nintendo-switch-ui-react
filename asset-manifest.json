@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/nintendo-switch-ui-react/static/css/main.1e4648e3.chunk.css",
-    "main.js": "/nintendo-switch-ui-react/static/js/main.a57f2b90.chunk.js",
-    "main.js.map": "/nintendo-switch-ui-react/static/js/main.a57f2b90.chunk.js.map",
+    "main.css": "/nintendo-switch-ui-react/static/css/main.fdb79cc3.chunk.css",
+    "main.js": "/nintendo-switch-ui-react/static/js/main.1346caf6.chunk.js",
+    "main.js.map": "/nintendo-switch-ui-react/static/js/main.1346caf6.chunk.js.map",
     "runtime-main.js": "/nintendo-switch-ui-react/static/js/runtime-main.80928b0e.js",
     "runtime-main.js.map": "/nintendo-switch-ui-react/static/js/runtime-main.80928b0e.js.map",
-    "static/js/2.90c8182c.chunk.js": "/nintendo-switch-ui-react/static/js/2.90c8182c.chunk.js",
-    "static/js/2.90c8182c.chunk.js.map": "/nintendo-switch-ui-react/static/js/2.90c8182c.chunk.js.map",
+    "static/js/2.da60b079.chunk.js": "/nintendo-switch-ui-react/static/js/2.da60b079.chunk.js",
+    "static/js/2.da60b079.chunk.js.map": "/nintendo-switch-ui-react/static/js/2.da60b079.chunk.js.map",
     "index.html": "/nintendo-switch-ui-react/index.html",
-    "static/css/main.1e4648e3.chunk.css.map": "/nintendo-switch-ui-react/static/css/main.1e4648e3.chunk.css.map",
-    "static/js/2.90c8182c.chunk.js.LICENSE.txt": "/nintendo-switch-ui-react/static/js/2.90c8182c.chunk.js.LICENSE.txt",
+    "static/css/main.fdb79cc3.chunk.css.map": "/nintendo-switch-ui-react/static/css/main.fdb79cc3.chunk.css.map",
+    "static/js/2.da60b079.chunk.js.LICENSE.txt": "/nintendo-switch-ui-react/static/js/2.da60b079.chunk.js.LICENSE.txt",
     "static/media/battery-empty-solid.a8a08663.svg": "/nintendo-switch-ui-react/static/media/battery-empty-solid.a8a08663.svg",
     "static/media/battery-full-solid.403aa982.svg": "/nintendo-switch-ui-react/static/media/battery-full-solid.403aa982.svg",
     "static/media/battery-half-solid.cfc95e66.svg": "/nintendo-switch-ui-react/static/media/battery-half-solid.cfc95e66.svg",
@@ -22,8 +22,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.80928b0e.js",
-    "static/js/2.90c8182c.chunk.js",
-    "static/css/main.1e4648e3.chunk.css",
-    "static/js/main.a57f2b90.chunk.js"
+    "static/js/2.da60b079.chunk.js",
+    "static/css/main.fdb79cc3.chunk.css",
+    "static/js/main.1346caf6.chunk.js"
   ]
 }
