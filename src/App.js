@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWifi } from "@fortawesome/free-solid-svg-icons";
 import { useContext, useEffect } from "react";
 import { InputContext } from "./context/inputContext";
+import { BottomBar } from "./components/BottomBar";
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
 
   useEffect(() => {
     if (setNumber !== 2)
-    setTotalSets(2);
+      setTotalSets(2);
   }, [setNumber, setTotalSets])
 
   return (
@@ -33,7 +34,7 @@ function App() {
         <GameCarousel />
         <UtilsRow />
       </div>
-      <div className="bottom-bar"></div>
+      <BottomBar />
     </div>
   );
 }
