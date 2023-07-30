@@ -24,7 +24,6 @@ export const UtilsRow = () => {
     const [onKeyDown, selectedIndex, setSelectedIndex] = useControls(icons.length);
 
     return <div className='utils-row-container'>
-        <ScrollText className="utils-text" text={icons[selectedIndex][2]} showText={activeSet === activeSetIndex} />
         <div
         onKeyDown={onKeyDown}
         onScroll={(e) => e.preventDefault()}
