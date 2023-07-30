@@ -8,6 +8,7 @@
 :root {
   --nsw-blue: #06BADD;
   --nsw-blue-bright: #71e7ff;
+  --nsw-background: rgb(66, 66, 66);
 }
 
 html {
@@ -17,7 +18,7 @@ html {
 }
 
 body {
-  background-color: rgb(66, 66, 66);
+  background-color: var(--nsw-background);
   font-family: "NSW";
   margin: 0;
   overflow: hidden;
