@@ -5,7 +5,6 @@ import { Util } from './Util';
 import { useControls } from '../hooks/controls';
 import { useContext } from 'react';
 import { InputContext } from '../context/inputContext';
-import { ScrollText } from './ScrollText';
 
 const activeSetIndex = 1;
 
