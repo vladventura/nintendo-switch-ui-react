@@ -1,41 +1,19 @@
 import "./App.css";
-import { GameCarousel } from "./components/GameCarousel";
-import { Clock } from "./components/Clock";
-import { Battery } from "./components/Battery";
-import { PlayerIcon } from "./components/PlayerIcon";
-import { UtilsRow } from "./components/UtilsRow";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faWifi } from "@fortawesome/free-solid-svg-icons";
+import { Screen } from "./Screen";
 import { useContext, useEffect } from "react";
-import { InputContext } from "./context/inputContext";
-import { BottomBar } from "./components/BottomBar";
+
+import { ThemeDataContext } from "./context/themeContext";
 
 function App() {
 
-  const { onKeyDown, setTotalSets, setNumber } = useContext(InputContext);
+  const { loadTheme } = useContext(ThemeDataContext);
 
   useEffect(() => {
-    if (setNumber !== 2)
-      setTotalSets(2);
-  }, [setNumber, setTotalSets])
+    loadTheme();
+  }, [loadTheme])
 
-  return (
-    <div className="screen light" onKeyDown={onKeyDown}>
-      <div className="status-bar">
-        <PlayerIcon />
-        <div className="status-info">
-          <Clock />
-          <FontAwesomeIcon className="wifi-icon icon" icon={faWifi} />
-          <Battery />
-        </div>
-      </div>
-      <div className="main-container">
-        <GameCarousel />
-        <UtilsRow />
-      </div>
-      <BottomBar />
-    </div>
-  );
+  return <Screen />
+
 }
 
 export default App;

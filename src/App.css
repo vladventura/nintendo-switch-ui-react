@@ -19,6 +19,7 @@
   background-color: var(--nsw-background);
   z-index: 0;
   position: relative;
+  transition: 0.125s linear;
 }
 
 .screen.light {
