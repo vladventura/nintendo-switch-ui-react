@@ -20,7 +20,7 @@ function App() {
   }, [setNumber, setTotalSets])
 
   return (
-    <div className="screen" onKeyDown={onKeyDown}>
+    <div className="screen light" onKeyDown={onKeyDown}>
       <div className="status-bar">
         <PlayerIcon />
         <div className="status-info">
