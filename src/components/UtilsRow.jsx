@@ -12,9 +12,9 @@ const icons = [
     ["messages", faMessage, "News"],
     ["shop", faBagShopping, "Nintendo Shop"],
     ["gallery", faImage, "Gallery"],
-    ["", faGamepad, "Controllers"],
-    ["", faGear, "Settings"],
-    ["", faPowerOff, "Power"],
+    ["common", faGamepad, "Controllers"],
+    ["common", faGear, "Settings"],
+    ["common", faPowerOff, "Power"],
 ];
 
 
