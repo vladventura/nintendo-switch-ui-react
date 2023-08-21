@@ -27,3 +27,7 @@
   width: 3rem !important;
   color: white;
 }
+
+.screen.light .icon {
+  color: #383334;
+}

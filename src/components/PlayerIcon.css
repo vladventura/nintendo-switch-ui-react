@@ -36,3 +36,7 @@
     position: absolute;
     border-radius: 50%;
 }
+
+.screen.light .player-icon-img-container::before {
+    background-color: #f9ffff;
+}
