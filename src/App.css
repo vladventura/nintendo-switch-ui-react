@@ -19,6 +19,10 @@
   background-color: var(--nsw-background);
 }
 
+.screen.light {
+  background-color: var(--nsw-light-theme-background);
+}
+
 .screen>* {
   margin: 2rem 3rem;
 }
@@ -29,6 +33,6 @@
   color: white;
 }
 
-.screen.light .icon {
-  color: #383334;
+.screen.light .wifi-icon {
+  color: var(--nsw-light-theme-icon);
 }
