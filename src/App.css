@@ -17,6 +17,8 @@
   grid-template-columns: 100%;
   grid-template-rows: 15% 70% 15%;
   background-color: var(--nsw-background);
+  z-index: 0;
+  position: relative;
 }
 
 .screen.light {
