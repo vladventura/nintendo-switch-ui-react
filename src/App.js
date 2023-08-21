@@ -26,7 +26,6 @@ function App() {
         <div className="status-info">
           <Clock />
           <FontAwesomeIcon className="wifi-icon icon" icon={faWifi} />
-          {/* <i className="fas fa-wifi wifi-icon icon"></i> */}
           <Battery />
         </div>
       </div>
