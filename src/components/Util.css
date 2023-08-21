@@ -17,9 +17,8 @@
     color: var(--nsw-blue);
 }
 
-
 .util-icon {
-    background-color: #524f4f;
+    background-color: var(--nsw-icon-background);
     border-radius: 50%;
     width: 3rem;
     height: 3rem;
@@ -48,16 +47,24 @@
     box-shadow: 0 0 0 0.25rem var(--nsw-blue-bright);
 }
 
-.icon.messages {
+.util-icon-shape.messages {
     color: #fa5d3c;
 }
 
-.icon.shop {
+.util-icon-shape.shop {
     color: #fcad1a;
 }
 
-.icon.gallery {
+.util-icon-shape.gallery {
     color: #2d9be5;
+}
+
+.screen.light .util-icon {
+    background-color: var(--nsw-light-theme-icon-background);
+}
+
+.screen.light .util-icon-shape.common {
+    color: var(--nsw-light-theme-icon);
 }
 
 @keyframes lightup {
