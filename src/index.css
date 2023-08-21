@@ -9,6 +9,12 @@
   --nsw-blue: #06BADD;
   --nsw-blue-bright: #71e7ff;
   --nsw-background: rgb(66, 66, 66);
+  --nsw-icon: white;
+  --nsw-icon-background: #524f4f;
+  /* Light theme related stuff */
+  --nsw-light-theme-icon: #383334;
+  --nsw-light-theme-icon-background: #fefefe;
+  --nsw-light-theme-background: #ececec;
 }
 
 html {
@@ -20,7 +26,6 @@ html {
 body {
   height: 100%;
   width: 100%;
-  background-color: var(--nsw-background);
   font-family: "NSW";
   margin: 0;
   overflow: hidden;
@@ -28,6 +33,7 @@ body {
 
 p {
   color: white;
+  font-weight: 600;
 }
 
 #root {

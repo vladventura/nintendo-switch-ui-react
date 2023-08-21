@@ -16,6 +16,7 @@
     height: 3rem;
     padding: 0.25rem;
     border-radius: 50%;
+    position: relative;
 }
 
 .player-icon-img-container {
@@ -31,8 +32,15 @@
     display: block;
     width: 3.5rem;
     height: 3.5rem;
-    background-color: rgb(107, 103, 103);
-    z-index: -1;
+    background-color: var(--nsw-icon-background);
     position: absolute;
     border-radius: 50%;
+}
+
+.screen.light .player-icon-img-container::before {
+    background-color: var(--nsw-light-theme-icon-background);
+}
+
+.screen.light .friends-count {
+    color: rgb(139, 206, 16);
 }

@@ -11,3 +11,12 @@
     height: 1.75rem;
     margin-left: 0.5rem;
 }
+
+/* This is always an svg wrapping a path */
+.screen.light .battery-icon > path {
+    fill: #383334;
+}
+
+.screen.light .battery-percentage {
+    color: #383334;
+}

@@ -16,6 +16,14 @@
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 15% 70% 15%;
+  background-color: var(--nsw-background);
+  z-index: 0;
+  position: relative;
+  transition: 0.125s linear;
+}
+
+.screen.light {
+  background-color: var(--nsw-light-theme-background);
 }
 
 .screen>* {
@@ -26,4 +34,8 @@
   /* Counters the incoming width from fontawesome */
   width: 3rem !important;
   color: white;
+}
+
+.screen.light .wifi-icon {
+  color: var(--nsw-light-theme-icon);
 }

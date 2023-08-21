@@ -24,7 +24,7 @@ export const Util = ({ iconClass, faIcon, active, tabIndex, onClick, utilName })
             ref={utilRef}
             onFocus={onFocus}
         >
-            <FontAwesomeIcon className={`icon ${iconClass}`} icon={faIcon} />
+            <FontAwesomeIcon className={`icon ${iconClass} util-icon-shape`} icon={faIcon} />
         </div>
         <div className="util-name-container">
             {active && <span className="util-name">{utilName}</span>}

@@ -1,3 +1,4 @@
+import "./Clock.css";
 import React, { useState, useEffect } from 'react';
 import { DateTime } from 'luxon';
 
@@ -18,5 +19,5 @@ export const Clock = () => {
         };
     }, [updateTimeInterval]);
 
-    return <p>{timeString}</p>
+    return <p className="clock">{timeString}</p>
 }
